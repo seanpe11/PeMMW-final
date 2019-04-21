@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block topMargin %} <header class="masthead" style = "margin-bottom:1.5rem"> {% endblock %}
+
+{% block content %}
+<script>
+function myFunction() {
+  var p = document.getElementById("principle").value;
+  var r = document.getElementById("rate").value;
+  var n = document.getElementById("period").value;
+  var t = document.getElementById("time").value;
+
+  var base = eval("1+r/n");
+  var expo = eval("12 * 10");
+
+  var interest = p * Math.pow(base, expo);
+
+  if(interest > 2220106 && interest < 2220107){
+    document.getElementById("interest").innerHTML = "PHP  " + interest.toFixed(2) + " (click next to continue)";
+  }
+  else{
+    document.getElementById("interest").innerHTML = "PHP  " + interest.toFixed(2) + ", but this value is incorrect for our story.";
+  }
+
+}
+</script>
+
+  <h1 class="cover-heading" align = left>{{ active }}</h1>
+  <div class = "myBox">
+  <p align = justify>Now, knowing how to solve, you simply fill in the parts of the equation with the information that you found on your brother's laptop.<br/></p>
+    <p align = justify>He took a compound interest loan which means you will use the equation:</p>
+    <p><strong><i>F</i> = P(1 + <sup>r</sup>&frasl;<sub>n</sub>)<sup>nt</sup></strong></p>
+    <p align = justify>And you use the information you gathered to set the variables</p>
+    <p style = "margin-left:30px">
+      Principal = PHP 500,000<br/>
+      Rate = 5% or 0.05 in decimal<br/>
+      Quarterly<br/>
+      Time = 2 years<br/>
+    </p>
+    <p align = justify>Using this data, you fill it in into an online calculator you found online. Fill in the information!</p>
+  <table align = "center">
+    <tr>
+      <td align="left">Principle:</td>
+      <td><input type = "text" id = "principle"></td>
+    </tr>
+    <tr>
+      <td align="left">Rate (in decimal): </td>
+      <td><input type = "text" id = "rate"></input></td>
+    </tr>
+    <tr>
+      <td align="left">No. of times compounded annually:</td>
+      <td><input type = "text" id = "period"></input></td>
+    </tr>
+    <tr>
+      <td align="left">Time period (in years):</td>
+      <td><input type = "text" id = "time"></input></td>
+    </tr>
+    <tr>
+      <td colspan = "2" id = "interest"></td>
+    </tr>
+    <tr>
+      <td colspan = "2"><button onclick="myFunction()">Compute</button></td>
+    </tr>
+  </table>
+  </div>
+
+
+
+  <div style = 'display:flex; justify-content:space-between'>
+    <a href="{% url 'partI_2' %}" class="btn btn-lg btn-secondary">&lt;Back</a>
+    <a href="{% url 'partII_1' %}" class="btn btn-lg btn-secondary">Next&gt;</a>
+  </div>
+{% endblock %}

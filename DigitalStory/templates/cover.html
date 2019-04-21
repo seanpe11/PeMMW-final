@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block topMargin %} <header class="masthead mb-auto"> {% endblock %}
+
+{% block content %}
+  <h1 class="cover-heading"><strong>3 Equations to Save A Life</strong></br></h1> <h5 class = "cover-heading">An Interactive Digital Thriller</h5></br>
+  <p class="lead" font-size="26">3 Equations to Save A Life is an interactive web digital story which will test your knowledge of 21st century math concepts that are used in the modern world.</p>
+  <iframe width="600" height="315" src="https://www.youtube.com/embed/-JBgfVWt3yY?autoplay=1"
+  frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p class="lead">
+    <a href="{% url 'partI_1' %}" class="btn btn-lg btn-secondary">&lt;Enter&gt;</a>
+  </p>
+{% endblock %}

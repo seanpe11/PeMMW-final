@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block topMargin %} <header class="masthead" style = "margin-bottom:1.5rem"> {% endblock %}
+
+{% block content %}
+  <h1 class="cover-heading" align = left>{{ active }}</h1>
+  <div class = "myBox">
+
+  <br></br>
+  <p align = justify>You stare at the statements for a while:
+  </p>
+  <p style = "margin-left:30px" align = justify>
+    1. Sophos Jimenez. If I went to the casino and I was kidnapped on a Wednesday, then it was definitely Philip who kidnapped me. <br>
+    2. Jose Mansana. If they asked for around 1-2 million pesos, then it was definitely Jose.<br>
+    3. Kristopher Briones. If it was neither Philip or Jose, then it was probably Christopher.<br>
+  </p>
+  <p align = justify>
+    You keep staring for a while. Belatedly, you realize that you might need to use another concept. This logical solution will take a little more work than normal. What concept do you use this time? Well it seems like logical expresssions would definitely work for this problem. Recalling once more the lessons you learned in Math in the Modern World, you first translate
+    the statements into logical propositions. You remember that a logical proposition works as a sort of variable that holds a value of true or false, but not both. <br>
+  </p>
+  <p align = left style = "margin-left:30px" >
+    Let s = Sophos Jimenez kidnapped your brother.<br>
+    Let j = Jose Mansana kidnapped your brother.<br>
+    Let k = Kristopher Briones kidnapped your brother.<br>
+    Let c = your brother went to the casino. <br>
+    Let w = your brother was kidnapped on a Wednesday.<br>
+    Let m = the ransom was around 1-2 million pesos<br>
+  </p>
+  <p align = justify>
+    Using the propositions you have above, you then translate the rest of the statements into logical expressions.
+  </p>
+  <p align = left style = "margin-left:30px" >
+    (c &and; w) &rarr; s &equiv; If your brother went to the casino and was kidnapped on Wednesday, then it was Philip<br>
+    m &rarr; j &equiv; If they asked for around 1-2 million pesos, then it was Jose.<br>
+    (&not;s &and; &not;j) &rarr; k &equiv;  If it was neither Sophos or Jose, then it was Kristopher.<br>
+  </p>
+  <p align = justify>
+    Next, you try to solve the logical expressions. You do need the truth values of a few propositions in order to figure this out. Those would be propositions c, w, and m. You know that:
+  </p>
+  <p align = left style = "margin-left:30px" >
+    c = True since you know that your brother went to the casino last night <br>
+    w = False since it was a Friday night<br>
+    m = False since they asked for three times the money he owed, which would total around 6 million<br>
+  </p>
+  <p align = justify>
+    One by one, you solve each of the three expressions using the truth values you figured out.
+  </p>
+  <p align = left style = "margin-left:30px" >
+    1. (c &and; w) &rarr; s<br>
+    (c &and; w) &equiv; False <br>
+    Therefore, by rule of Modus Tollens, Sophos did not kidnap your brother.<br></br>
+    2. m &rarr; j <br>
+    m &equiv; False<br/>
+    Therefore, by rule of Modus Tollens, Jose did not kidnap your brother. <br></br>
+    3. (&not;s &and; &not;j) &rarr; k <br/>
+    &not;s &equiv; True <br/>
+    &not;j &equiv; True <br/>
+    (&not;s &and; &not;j) &equiv; True<br/>
+    Therefore, by rule of Modus Ponens, Kristopher kidnapped your brother.
+  </p>
+  <p align = "left">
+    With this new information, you call the police and update them on everything, telling them that Kristopher Briones was the most likely culprit. They are a little skeptical of the logic that your brother presented, as are you, but it was most definitely a start.
+    Now you've done everything you can. It's in the police's hands now. You go back to the couch and sit, ignoring the glass shards still spread around.
+  </p>
+
+  </div>
+  <div style = 'display:flex; justify-content:space-between'>
+    <a href="{% url 'partIII_1' %}" class="btn btn-lg btn-secondary">&lt;Back</a>
+    <a href="{% url 'partIII_3' %}" class="btn btn-lg btn-secondary">Next&gt;</a>
+  </div>
+{% endblock %}

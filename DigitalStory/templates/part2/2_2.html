@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block topMargin %} <header class="masthead" style = "margin-bottom:1.5rem"> {% endblock %}
+
+{% block content %}
+  <h1 class="cover-heading" align = left>{{ active }}</h1>
+  <div class = "myBox">
+  <p align = justify>
+    First you try "samgyupsarap".
+    <br/><br/>
+    <b>BEEP</b>
+    <br/><br/>
+    Okay, not too surprising. You expected that.
+    Now you try "snsqsjpdnxmjchmsm".
+    <br/><br/>
+    <b>BEEP</b>
+    <br/><br/>
+    Again, the safe beeps. It almost sounds like some sinister, cynical, sarcastic laugh. You're really getting mad at this thing. Frustrated once more (you've started to notice you're getting frustrated a lot),
+    you sit down in a chair and scream into your hands. You calm down a bit. <i>Calm down and think</i>, you think. <i>This has to be the password to the safe</i>. Suddenly, a lightbulb in your head goes off.
+    <br/><br/>
+    You remembered as children, you and your brother enjoyed passing notes with ciphers. One of your brothers favorites, and most likely the one he's using for the safe, is the Vigenere Cipher. He liked it so much
+    since as a child, your brother loved stories of the Roman Empire and how Caesar used ciphers in his scrolls to communicate with his armies. The Vigenere Cipher was a more modern, secure version of that cipher.
+    A sudden realization hits you; <i>samgyupsarap</i> is the key and <i>snsqsjpdnxmjchmsm</i> is the encrypted cipher! <i>(click next to continue)</i>
+
+  </p>
+  </div>
+  <div style = 'display:flex; justify-content:space-between'>
+    <a href="{% url 'partII_1' %}" class="btn btn-lg btn-secondary">&lt;Back</a>
+    <a href="{% url 'partII_3' %}" class="btn btn-lg btn-secondary">Next&gt;</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block topMargin %} <header class="masthead" style = "margin-bottom:1.5rem"> {% endblock %}
+
+{% block content %}
+  <h1 class="cover-heading" align = left>Ending</h1>
+  <div class = "myBox">
+  <p align = justify>Anxiously, you wait, tapping your knee with your finger on the couch. Haven't the police found them already? You know its only been an hour, but you can't help but be anxious after all
+    the hardwork you just did. Checking your phone, but seeing no messages, you wait more. <br><br>
+    You wait. You check your phone. And then you wait again.
+    <br><br>
+    This cycle repeats itself for a considerable amount of time. Once more, sitting on the couch, you begin to doze off. The fatigue is reaching you; you did everything you could, and it might take a whi--<br><br>
+    <strong><i>BRRRRRRRNG</i></strong>
+    <br><br>
+    You rush to pick up the phone, almost dropping it, and then dropping it, answering it as you pick it up off the floor.
+    <br><br>
+    "Hello?"
+    <br></br>
+    "Hey, " a tired voice replied, "I'm okay."
+    <br></br>
+    You smile, and sob tears of joy. You did it. And you have math to thank for it.
+  </p>
+  <h2>END</h2>
+  </div>
+
+  <div style = 'display:flex; justify-content:space-between'>
+    <a href="{% url 'partIII_2' %}" class="btn btn-lg btn-secondary">&lt;Back</a>
+    <a href="{% url 'About' %}" class="btn btn-lg btn-secondary">About</a>
+  </div>
+{% endblock %}

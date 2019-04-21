@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0090)file:///D:/Libraries/Documents/Programming%20Stuff/PeMMW/DigitalStory/templates/cover.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>3 Equations to Save A Life</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      /* Box styles */
+      .myBox {
+      border: none;
+      width: 640px;
+      height: 640px;
+      overflow: auto;
+      }
+
+      /* Scrollbar styles */
+      ::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+      border: 1px solid grey;
+      border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+      background: grey;
+      border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+      background: lightgrey;
+      }
+
+
+    </style>
+    <!-- Custom styles for this template -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'DigitalStory/cover.css' %}">
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  {% block topMargin %} {% endblock %}
+    <div class="inner">
+      <img src="{% static 'DigitalStory/peLogoBlackEdges.png' %}" alt="My image" width = 74 align = "left">
+      <nav class="nav nav-masthead justify-content-center">
+        {% for link in list_links %}
+          {% if link.top > 0 %}
+            {% if active == link.name %}
+              <a class="nav-link active" href="/{{ link.url }}">{{ link.name }}</a>
+            {% else %}
+              <a class="nav-link" href="/{{ link.url }}">{{ link.name }}</a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="inner cover">
+    {% block content %}
+    {% endblock %}
+
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Made by Sean Pe DLSU ID 1182900 in fulfillment of the requirements for<br/> GEMATMW Term 2 A.Y. 2018-2019 Section S11</p>
+    </div>
+  </footer>
+</div>
+
+
+</body></html>

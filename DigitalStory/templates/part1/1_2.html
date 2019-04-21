@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block topMargin %} <header class="masthead" style = "margin-bottom:1.5rem"> {% endblock %}
+
+{% block content %}
+  <h1 class="cover-heading" align = left>{{ active }}</h1>
+  <div class = "myBox">
+  <p align = justify>
+    You open up his computer and (using the password you found out a few nights ago, fortunately), you head straight for his finances. You find a file which holds the information you need: the loan.
+    <br/><br/>
+    Reading the file, you see your brother took a loan out for PHP 500,000 at a rate of 5% for two years, compounding quarterly. Although he usually keeps track, your brother did not bother to compute for the total.
+    You'll have to use your knowledge of finance to figure out how much he owes, and hopefully, you'll have enough money to pay for it. Thinking hard, you remember the lessons from Math in the Modern World.
+    <br/><br/>
+    You realize that this is a compounding loan, which means that you need to use the formula for compound interest. Checking online, you find that the formula for compound interest is
+  </p>
+  <p><strong><i>F</i> = P(1 + <sup>r</sup>&frasl;<sub>n</sub>)<sup>nt</sup></strong></p>
+
+  <p align = left>
+    Where:
+  </p>
+  <p style = "margin-left:30px" align = left>
+    F is the future value (including the principal)<br/>
+    P is the principal investment (in this case, the loan your brother took out)<br/>
+    r is the rate of interest (in decimal)<br/>
+    n is the number of times the interest in compounded<br/>
+    t is the number of years of until payment<br/>
+  </p>
+  <p align = left>Armed with this information, you then proceed to solve for the amount of money your brother owes. <i>(click next to continue)</i></p>
+
+
+  <!-- A = P (1 + r/n) (nt) -->
+
+  <br>
+  </div>
+
+  <div style = 'display:flex; justify-content:space-between'>
+    <a href="{% url 'partI_1' %}" class="btn btn-lg btn-secondary">&lt;Back</a>
+    <a href="{% url 'partI_3' %}" class="btn btn-lg btn-secondary">Next&gt;</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block topMargin %} <header class="masthead" style = "margin-bottom:1.5rem"> {% endblock %}
+
+{% block content %}
+  <h1 class="cover-heading" align = left>{{ active }}</h1>
+  <div class = "myBox">
+  <p align = left>
+    <br/><br/>
+    A quiet Saturday to end the week. Finally.<br/><br/>
+    Or so you thought.<br/><br/>
+
+    It is a Saturday morning, and your brother, whom you live with, still has not arrived at your home. The subdivision is as quiet as it usually is on a Saturday morning,
+    with most of its residents fast asleep after a hard-week's work, and for the rest, a hard Friday night out. Unfortunately, it is most likely your brother is amongst those people.
+    As he clearly is not here right now, he probably decided to spend the night at his friends place. Again, you shake your head at the prospect of your younger brother hanging out amongst
+    the people he does. A few nights out are forgivable, but the crowd your brother has fallen in with are no good news, most especially since they spend too much time at the casino. With a sigh,
+    you recline on the couch in the living room, browsing your phone while you put on some Netflix. Slowly, the monotony of both the show you are watching and the social media you are browsing cause your
+    eyelids to droop. It's been a long week anyways and you could really use some --
+    <br/><br/>
+    <strong>CRASH!!!</strong>
+    <br/><br/>
+    A sudden explosion of glass shatters the living room, violently jolting you out of your reverie, succeeded by a loud <i>thunk!</i> on the wooden floor. Not even a second after, you hear the screeching of tires
+    begin and gradually fade away. Once you recover, your mind begins to process what happened. Someone threw a brick through the window, and sped off in the distance before you could gather your wits. You then
+    lock at the brick closely. Attached to it, you notice a note:
+    <br/><br/>
+    "Your brother is a very unreliable debtor. Kindly return 3 times the amount he owes us so that we may release him to you. If you cannot return us our money, we equally will not be able to return your brother to you."
+    <br/><br/>
+    If he gets out of this, you know for sure that you'll get to say "I told you so" when it came to hanging out with those people, you think angrily. Yet, the anger dissipates once you realize the dire situation at hand.
+    Even though he wasn't exactly a superb example for the youth, he was -- no, <i>is</i> still your brother. You must do something.
+    <br/><br/>
+    Quickly, you run over the situation in your mind.
+    The note didn't say anything about how much he owed. However, despite his many shortcomings (which he was clearly suffering for now), your brother did keep good tabs on his finances as a poker player. Frantically,
+    you search the house for his computer.
+    <i>(click next to continue)</i>
+
+
+  </p>
+  </div>
+  <div style = 'display:flex; justify-content:space-between'>
+    <a href="{% url 'DS_entrance' %}" class="btn btn-lg btn-secondary">&lt;Back</a>
+    <a href="{% url 'partI_2' %}" class="btn btn-lg btn-secondary">Next&gt;</a>
+  </div>
+{% endblock %}

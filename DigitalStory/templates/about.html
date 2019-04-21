@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block links %}
+  <a class="nav-link" href="{% url 'DS_entrance' %}">Home</a>
+  <a class="nav-link active" href="{% url 'About' %}">About</a>
+{% endblock %}
+{% block topMargin %} <header class="masthead" style = "margin-bottom:2rem"> {% endblock %}
+
+  <a href="{% url list_links.curIndex.urlName %}" class="btn btn-lg btn-secondary">&lt;Back</a>
+  <a href="{% url list_links.curIndex.urlName %}" class="btn btn-lg btn-secondary">Next&gt;</a>
+
+{% block content %}
+  <h1 align = "left" >About</h1>
+  <div class = "myBox">
+  <p align = "justify">
+    This website was hastily put together in a few days to hopefully help compensate a student's failing grade. It follows a second-person (slightly) interactive story, is kinda cheesy, but hopefully well put together
+    and enjoyable. The mathematical concepts for the story were topics taught in GE Math in the Modern World. Sources for topics:
+  </p>
+  <p style = "margin-left:30px" align = left>
+    "Compound Interest Formula - Explained" <br>
+    <a href = "https://www.thecalculatorsite.com/articles/finance/compound-interest-formula.php">https://www.thecalculatorsite.com/articles/finance/compound-interest-formula.php</a><br></br>
+    "Vigenere Cipher: Encrypt and Decrypt"<br>
+    <a href = "https://cryptii.com/pipes/vigenere-cipher">https://cryptii.com/pipes/vigenere-cipher</a><br></br>
+    "Rules of inference"<br>
+    <a href = "https://www.cs.sfu.ca/~ggbaker/zju/math/inference.html#inference-rules">https://www.cs.sfu.ca/~ggbaker/zju/math/inference.html#inference-rules</a><br></br>
+  </p>
+
+  <p align = justify>
+    Resources used for front end and backend:
+  </p>
+  <p style = "margin-left:30px" align = left>
+    "Python 3.6" <br>
+    <a href = "https://www.python.org/">https://www.python.org/</a><br></br>
+    "Django Web Framework"<br>
+    <a href = "https://www.djangoproject.com/">https://www.djangoproject.com/</a><br></br>
+    "Bootstrap CSS 'Cover' Example"<br>
+    <a href = "https://getbootstrap.com/docs/4.3/examples/cover/">https://getbootstrap.com/docs/4.3/examples/cover/</a><br></br>
+  </p>
+  <h4>Thanks for visiting my website!</h4>
+
+
+  </div>
+  <a href="{% url 'DS_entrance' %}" class="btn btn-lg btn-secondary">Home</a>
+{% endblock %}

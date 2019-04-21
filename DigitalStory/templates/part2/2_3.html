@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block topMargin %} <header class="masthead" style = "margin-bottom:1.5rem"> {% endblock %}
+
+{% block content %}
+
+  <script>
+    function showNumbers(whatToShow){
+      var x = document.getElementsByClassName(whatToShow);
+      for (let item of x) {
+          if (item.style.visibility == "hidden")
+            item.style.visibility = "visible";
+      }
+    }
+  </script>
+
+  <div class = "myBox">
+  <h1 class="cover-heading" align = left>{{ active }}</h1>
+  <p align = justify>With renewed vigor, you hastedly recall what the Vigenere Cipher is. The Vigenere Cipher is a variation of the Caesar Cipher, which shifts each letter by a certain amount determined by a key.
+    <br><br>
+    First: you write the indexes of each of the letters in the encrypted phrase "snsqsjpdnxmjchmsm":<br>
+    <table style = "text-align:center; table-layout:fixed;" border=1px align = center width = 80% >
+      <tr>
+        {% for letter in encrypt %}
+          <td>{{ letter }}</td>
+        {% endfor %}
+      </tr>
+      <tr>
+        {% for letter in encrypt_number %}
+          <td class = "hide_key" style = "visibility:hidden">{{ letter }}</td>
+        {% endfor %}
+      </tr>
+    </table>
+    <button onclick = "showNumbers('hide_key')"  align = center>Solve</button>
+
+    <br><br>
+    Next: you do the same for each of the letters in the key, "samgyupsarap":<br>
+    <table style = "text-align:center; table-layout:fixed;" border=1px align = center width = 80% >
+      <tr>
+        {% for letter in key %}
+          <td>{{ letter }}</td>
+        {% endfor %}
+      </tr>
+      <tr>
+        {% for letter in key_number %}
+          <td class = "hide_encrypt" style = "visibility:hidden">{{ letter }}</td>
+        {% endfor %}
+      </tr>
+    </table>
+    <button onclick = "showNumbers('hide_encrypt')"  align = center>Solve</button>
+
+    <br><br>
+    Now you line up the encrypted text with your key, "samgyupsarap", repeating the key if its too long:<br>
+    <table style = "text-align:center; table-layout:fixed;" border=1px align = center width = 80% >
+      <tr>
+        {% for letter in encrypt %}
+          <td class = "hide_lineup" style = "visibility:hidden">{{ letter }}</td>
+        {% endfor %}
+      </tr>
+      <tr>
+        {% for letter in key_extended %}
+          <td class = "hide_lineup" style = "visibility:hidden">{{ letter }}</td>
+        {% endfor %}
+      </tr>
+    </table>
+    <button onclick = "showNumbers('hide_lineup')"  align = center>Solve</button>
+
+    <br><br>
+    Using the numbers you found earlier, you now add the values from the key to the encrypted text per letter to decode the password. If it is greater than 26, you wrap it around back to a value less than 26.<br>
+    <table style = "text-align:center; table-layout:fixed;" border=1px align = center width = 80% >
+      <tr>
+        {% for letter in encrypt_number %}
+          <td>{{ letter }}</td>
+        {% endfor %}
+      </tr>
+      <tr>
+        {% for letter in key_number_extended %}
+          <td>{{ letter }}</td>
+        {% endfor %}
+      </tr>
+      <tr>
+        {% for letter in decrypt_number %}
+          <td class = "decrypt" style = "visibility:hidden">{{ letter }}</td>
+        {% endfor %}
+      </tr>
+    </table>
+    <button onclick = "showNumbers('decrypt')"  align = center>Solve</button>
+
+    <br><br>
+    Last step! Now that you have the numbers, you simply convert them into alphabetical characters.<br>
+    <table style = "text-align:center; table-layout:fixed;" border=1px align = center width = 80% >
+      <tr>
+        {% for letter in decrypt_number %}
+          <td>{{ letter }}</td>
+        {% endfor %}
+      </tr>
+      <tr>
+        {% for letter in decrypt %}
+          <td class = "final" style = "visibility:hidden">{{ letter }}</td>
+        {% endfor %}
+      </tr>
+    </table>
+    <button onclick = "showNumbers('final')"  align = center>Solve</button>
+  </p>
+  <br/>
+  <br/>
+  </div>
+  <br/>
+  <br/>
+
+  <div style = 'display:flex; justify-content:space-between'>
+    <a href="{% url 'partII_2' %}" class="btn btn-lg btn-secondary">&lt;Back</a>
+    <a href="{% url 'partIII_1' %}" class="btn btn-lg btn-secondary">Next&gt;</a>
+  </div>
+{% endblock %}

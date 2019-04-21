@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block topMargin %} <header class="masthead" style = "margin-bottom:1.5rem"> {% endblock %}
+
+{% block content %}
+  <h1 class="cover-heading" align = left>{{ active }}</h1>
+  <div class = "myBox">
+  <p align = justify>"ANGSARAPNGJOLLIBEE". Yep, this was definitely your brother's password alright. Almost instantly, as soon as you press the last key to the password, the safe
+    pops open with a much nicer beep this time. You look inside; there is money. As you begin counting the cash, you realize that the amount of money inside is actually quite impressive, for a lifestyle of gambling.
+    However, despite it being a considerable amount, you realize with despair that as the uncounted money begins to dwindle that this will not be not nearly enough. You look closer into the safe. At the bottom of the
+    pile where the money was, you notice yet another sticky note that you did not notice the first time in your rush to count the money.
+  </p>
+  <textarea rows = "10" cols = "50">
+    Dearest sibling,
+        I know this most definitely will not find you in good health, and I will most likely not be in good health either if you are looking through this money. If you've looked into this safe for money, unless you're a snoopy [expletive], then I was probably kidnapped and you are desperately trying to help. Thanks for that, by the way.
+        What follows next will be daunting but I trust you with this information. There are three parties likely to kidnap me for my poor financial choices.
+        1. Philip Castala. If I went to the casino and it was on a Wednesday, then it was definitely Philip who kidnapped me.
+        2. Jose Mansana. If they asked for a million pesos, then it was definitely Jose.
+        3. Christopher Briones. If it was neither Philip or Jose, then it was probably Christopher.
+    Hopefully you'll never need this. But if you do, I trust you completely with my life.
+  </textarea>
+  <p align = justify>
+    You sigh. Your brother wasn't that bad a person, and definitely a good writer (with quite a flair for the dramatic), but he most definitely made the poorest life decisions. Even though the business
+    of bailing him out generally falls onto you (most especially in this case), you can't help it. He's your brother. <br><br>
+    With a sudden jolt, however, you realize that you haven't even called the police yet! Well, that's fine. Now, when you do call them, you can give them this information. It is quite complex, but
+    you realize that you could probably figure out who did it once you analyze the statements your brother gave.
+  </p>
+
+
+  </div>
+  <div style = 'display:flex; justify-content:space-between'>
+    <a href="{% url 'partII_3' %}" class="btn btn-lg btn-secondary">&lt;Back</a>
+    <a href="{% url 'partIII_2' %}" class="btn btn-lg btn-secondary">Next&gt;</a>
+  </div>
+{% endblock %}

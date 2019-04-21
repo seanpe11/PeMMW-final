@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block topMargin %} <header class="masthead" style = "margin-bottom:1.5rem"> {% endblock %}
+
+{% block content %}
+  <h1 class="cover-heading" align = left>{{ active }}</h1>
+  <div class = "myBox">
+  <p align = justify>You look hopelessly at the number that you calculated. More than 2 million pesos! Not to mention, the kidnappers want three times as much as that. There was no way you'd have enough money to pay!
+    You consider your options again. You still have around 3 million worth of savings in the bank, but hopefully your brother stored money somewhere in the house which could help pay for it. With a desperate air, you
+    scrounge the house to find your brother's hiding place. In his room, underneath the bed, you find a safe. However, it requires a password to unlock it. You try all of what you think may be the password; his computer password,
+    your mother's name, your father's name, the dog's name, any think you can think of that would be personal to him. Yet, without fail, every password you try denies you with a contemptous error sound.
+    Frustrated, you bring the safe back to the desk to search for clues. Suddenly, a certain sticky note catches your eye. On it, it says:
+  </p>
+  <br/>
+  <textarea rows="3" cols="30" align = center readonly style = "background-color:tan">
+      samgyupsarap
+      snsqsjpdnxmjchmsm
+  </textarea>
+  <br/>
+  <br/>
+  <p align = left>
+    Excitedly, you realize this may be the password to the safe. In a rush, you try both of the passwords <i>(click next to continue)</i>
+  </p>
+  </div>
+
+
+  <div style = 'display:flex; justify-content:space-between'>
+    <a href="{% url 'partI_3' %}" class="btn btn-lg btn-secondary">&lt;Back</a>
+    <a href="{% url 'partII_2' %}" class="btn btn-lg btn-secondary">Next&gt;</a>
+  </div>
+{% endblock %}
